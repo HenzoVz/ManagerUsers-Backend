@@ -9,7 +9,8 @@
 - Docker Container Postgresql
 - JWT Authentication
 
-## Padrão de Arquitetura MVC
-- Model, vai representar a lógica de negócios. E também é responsaǘel pelo acesso e manipulação de dados na aplicação.
-- View, vai ser responsável pela interface, onde vai ser mostrados as informações do model para o usuário.
-- Controller, vai ser responsável por fazer a conexão entre o Model e a View.
+## Padrão de Arquitetura MVC com Services Layer (Services Pattern)
+- Model, interage com o banco de dados e executa ações lógicas para preparar informações.
+- View, exibe dados.
+- Controller, coleta a entrada do usuário, pede ao modelo os dados solicitados e os envia de volta para a visualização
+- O Services Layer, vai ser usado para abstrair a lógica de negócios da camada de Model e criar DTO'S que serão mapeados pelo Controller.
