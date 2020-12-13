@@ -1,4 +1,4 @@
 .idea/
 .vscode/
-/gitnode_modules
+gitnode_modules/
 build/
