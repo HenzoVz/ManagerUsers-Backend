@@ -9,11 +9,15 @@ class CreateRegistries1607819278235 implements MigrationInterface {
         name: 'registries',
         columns: [
           {
-            name: 'registry',
+            name: 'id',
             type: 'varchar',
             isPrimary: true,
             generationStrategy: 'uuid',
             default: 'uuid_generate_v4()',
+          },
+          {
+            name: 'registry',
+            type: 'varchar',
           },
           {
             name: 'name',

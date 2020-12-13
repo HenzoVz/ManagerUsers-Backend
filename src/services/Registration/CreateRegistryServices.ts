@@ -1,6 +1,6 @@
 import { getRepository } from 'typeorm';
 
-import Registration from '../../models/Registries/entities/Registry';
+import Registration from '../../models/Registry';
 
 import AppError from '../../errors/AppError';
 
@@ -15,7 +15,7 @@ interface RequestDTO {
   city: string;
 }
 
-class CreateRegistrationController {
+class CreateRegistryServices {
   public async execute({ ...rest }: RequestDTO): Promise<Registration> {
     const registryRepository = getRepository(Registration);
 
@@ -39,4 +39,4 @@ class CreateRegistrationController {
   }
 }
 
-export default CreateRegistrationController;
+export { CreateRegistryServices, RequestDTO };

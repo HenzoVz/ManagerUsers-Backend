@@ -8,16 +8,19 @@ import {
   JoinColumn,
 } from 'typeorm';
 
-import User from '../../users/entities/User';
+import User from './User';
 
 @Entity('registries')
 class Registration {
   @PrimaryGeneratedColumn('uuid')
   id: string;
 
+  @Column()
+  registry_id: string;
+
   @ManyToOne(() => User)
-  @JoinColumn({ name: 'registry' })
-  user: User;
+  @JoinColumn({ name: 'registry_id' })
+  registry: User;
 
   @Column()
   name: string;
@@ -27,6 +30,9 @@ class Registration {
 
   @Column()
   cpf: string;
+
+  @Column()
+  cep: string;
 
   @Column()
   street: string;
