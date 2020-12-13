@@ -2,3 +2,4 @@
 .vscode/
 gitnode_modules/
 build/
+node_modules
