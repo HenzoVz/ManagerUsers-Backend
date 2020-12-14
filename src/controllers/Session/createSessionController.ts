@@ -1,3 +1,4 @@
+/* eslint-disable no-delete-var */
 import { Router } from 'express';
 
 import SessionUserServices from '../../services/Session/CreateSessionUserServices';
@@ -17,7 +18,7 @@ sessionsRouter.post('/', async (request, response) => {
       password,
     });
 
-    delete password;
+    delete user.password;
 
     return response.json({ user, token });
   } catch (err) {
